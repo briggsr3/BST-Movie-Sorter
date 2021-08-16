@@ -67,8 +67,6 @@ int main(int argc, char** argv){
       cout << endl << "Best movie is " << bestMovie->name << " with rating " << bestMovie->rating << endl;
 
   }
-
-
   return 0;
 }
 
@@ -79,7 +77,7 @@ bool parseLine(string &line, string &movieName, double &movieRating) {
   bool flag = false;
   movieName = tempRating = "", movieRating = 0.0, flag = false;
 
-  for (int i = 0; i < line.length(); i++){
+  for (unsigned int i = 0; i < line.length(); i++){
     if(flag) tempRating += line[i];
     else if(line[i]==','&& line[0]!='"') flag = true;
     else {

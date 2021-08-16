@@ -9,10 +9,10 @@
 #include <iostream>
 
 using namespace std;
-/*
-int main();
-void runAll();
-void test_insert();
+
+
+//void runAll();
+//void test_insert();
 
 
 
@@ -24,7 +24,7 @@ void START_TEST(string testname){
 void END_TEST(string testname) {
     cout<<"END "<<testname<<endl<<endl;
 }
-*/
+
 /*
 void test_constructor();
 void test_append();
