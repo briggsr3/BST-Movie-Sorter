@@ -18,7 +18,7 @@ int main(int argc, char** argv){
     cerr << "Usage: " << argv[ 0 ] << "arg1 arg2 arg3" << endl;
     exit(1);
   }
-
+ /*
   bool flag = false;
   if(strcmp(argv[1], "true") == 0){
     flag = true;
@@ -28,7 +28,7 @@ int main(int argc, char** argv){
     cerr << "Argument 1 must be a boolean (true/false)" << endl;
     exit(1);
   }
-  
+  */
   ifstream movieFile (argv[2]);
   string line, movieName;
   double movieRating;
