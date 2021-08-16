@@ -4,21 +4,18 @@ CC=g++
 CFLAGS= -c -Wall
 
 #building game executable and testcards executable
-all: runMovies testTarget
+all: runMovies tests
 
 
 #autorun
-tests:
-	./testTarget
-
 
 #executable dependencies
 runMovies: main.o movies.o utility.o
 	$(CC) main.o movies.o -o runMovies
 
 
-testTarget: tests.o movies.o utility.o
-	$(CC) tests.o movies.o utility.o -o testTarget
+tests: tests.o movies.o utility.o
+	$(CC) tests.o movies.o utility.o -o tests
 
 
 #individual dependencies
@@ -36,4 +33,4 @@ utility.o: utility.cpp
 
 #clean
 clean:
-	rm -rf *.o runMovies testTarget
+	rm -rf *.o runMovies tests
