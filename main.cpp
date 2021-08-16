@@ -60,7 +60,6 @@ int main(int argc, char** argv){
   MoviesBST::Movie* bestMovie = MovieBST.findBestMovie(argv[3]);
 
   if((bestMovie) == nullptr) {
-      cout << "none";
       return 0;
   }
   else {
