@@ -11,7 +11,7 @@ using namespace std;
 int main(){
     runAll();
     return 0;
-    cout << "test";
+
 }
 
 void runAll() {
