@@ -12,23 +12,37 @@ using namespace std;
 
 //creating node class
 class MoviesBST {
-private:
+public:
     struct Movie {
         string name;
-        int rating;
+        double rating;
         Movie *left, *right, *parent;
         // useful constructor:
-        Movie(string n = "0", int v=0) : name(n), rating(v), left(0), right(0), parent(0) { }
+        Movie(string theName = "0", double theRating=0.0) : name(theName), rating(theRating), left(0), right(0), parent(0) { }
     };
 
-    Movie* root; //pointer to root node
-
-public:
     MoviesBST(); // constructor
     ~MoviesBST(); //destructor
     void clear(Movie *n); //for destructor
 
-    int getDepth(Movie *r);
+    void printPreOrder() const;
+    void printPreOrder(Movie *n) const;
+    int getDepth(Movie *n) const;
+    void Insert(Movie *n);
+    Movie* SearchR(string key);
+
+    Movie* findBestMovie(string prefix);
+    bool isEmpty() const;
+
+
+private:
+    Movie* root; //pointer to root node
+
+
+
+
+
+
 };
 
 #endif //PA02_MOVIES_H

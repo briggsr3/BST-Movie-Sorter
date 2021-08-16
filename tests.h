@@ -9,9 +9,22 @@
 #include <iostream>
 
 using namespace std;
-
+/*
+int main();
 void runAll();
+void test_insert();
 
+
+
+
+void START_TEST(string testname){
+    cout<<"START "<<testname<<endl;
+}
+
+void END_TEST(string testname) {
+    cout<<"END "<<testname<<endl<<endl;
+}
+*/
 /*
 void test_constructor();
 void test_append();
@@ -32,15 +45,9 @@ void test_append_single_element_list(); // Tests cases should be independent,
 // small, fast, orthogonal
 void test_equal_empty_list();
 void test_card_operator_double_equal();
+*/
 
-void START_TEST(string testname){
-    cout<<"Start "<<testname<<endl;
-}
-
-void END_TEST(string testname) {
-    cout<<"End "<<testname<<endl<<endl;
-}
-
+/*
 void assertEquals(string expected, string actual, string testDescription){
     if (expected == actual) {
         cout<<"PASSED " << endl;
