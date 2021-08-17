@@ -28,8 +28,8 @@ public:
     void printPreOrder() const;
     void printPreOrder(Movie *n) const;
     int getDepth(Movie *n) const;
-    void Insert(Movie *n);
-    Movie* SearchR(string key);
+    int Insert(Movie *n);
+    void SearchAllNodes();
 
     Movie* findBestMovie(string prefix);
     bool isEmpty() const;

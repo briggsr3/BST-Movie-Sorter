@@ -9,7 +9,7 @@
 
 MoviesBST::MoviesBST() : root(nullptr) { }
 
-// destructor deletes all nodes
+// destructor deletes all Movies
 MoviesBST::~MoviesBST() {
     clear(root);
 }
@@ -70,13 +70,17 @@ bool MoviesBST::isEmpty() const {
 }
 
 
-void MoviesBST::Insert(Movie *n) {
+int MoviesBST::Insert(Movie *n) {
     //checking if tree is empty:
+    int Nvisit = 0;
     if(root == nullptr){
         root =  n;
+        return Nvisit;
     }
     else {
         Movie* currentMovie = root;
+        int Nvisit = 1;
+
         while(currentMovie) {
             //less than case
             if(n->name < currentMovie->name) {
@@ -87,6 +91,7 @@ void MoviesBST::Insert(Movie *n) {
                 }
                 else {
                     currentMovie = currentMovie->left;
+                    Nvisit++;
                 }
             }
             //greater than case
@@ -98,33 +103,45 @@ void MoviesBST::Insert(Movie *n) {
                 }
                 else {
                     currentMovie = currentMovie->right;
+                    Nvisit++;
                 }
 
             }
 
         }
+        return Nvisit;
     }
-}
-
-/*
-MoviesBST::Movie* MoviesBST::SearchR(string desiredKey) {
-    Movie* current = root;
-    while(current) {
-        if(current->rating==desiredKey) {
-            return current;
-        }
-        else if(desiredKey<current->rating) {
-            current=current->left;
-       }
-        else{
-            current=current->right;
-        }
-   }
-    return nullptr;
 
 }
-*/
 
+
+void MoviesBST::SearchAllNodes() {
+
+    stack < Movie * > s;
+    Movie *curr = root;
+
+    while (curr != NULL || !s.empty()) {
+        // Reach the left most Movie of the curr Movie
+        while (curr != NULL) {
+            //the Movie's left subtree
+            s.push(curr);
+            curr = curr->left;
+        }
+
+        // Current must be NULL at this point
+        curr = s.top();
+        s.pop();
+
+        //cout << "movie" << curr->name << "visited" << endl;
+
+
+        curr = curr->right;
+
+    } //end of while
+
+
+
+}
 
 MoviesBST::Movie* MoviesBST::findBestMovie(string prefix) {
 
@@ -134,9 +151,9 @@ MoviesBST::Movie* MoviesBST::findBestMovie(string prefix) {
     Movie *topRated = new Movie();
 
     while (curr != NULL || !s.empty()) {
-        // Reach the left most Node of the curr Node
+        // Reach the left most Movie of the curr Movie
         while (curr !=  NULL){
-            //the node's left subtree
+            //the Movie's left subtree
             s.push(curr);
             curr = curr->left;
         }
