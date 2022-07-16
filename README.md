@@ -1,5 +1,5 @@
 # BST-Movie-Sorter
-A binary search tree implementated program that recieves a file of movies and their ratings, sorts them by name, then, given an inputted prefix, sorts by rating.
+A BST implemented solution that takes movies, their ratings and a prefix then prints a pre-order traversal of the created movie BST as well as the highest rated movie with the inputted prefix.
 
 
 Some file/folder descriptions: 
