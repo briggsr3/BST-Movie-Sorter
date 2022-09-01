@@ -20,5 +20,8 @@ Notes:
 
 Pictures: 
 
-20 random movies with prefix S as input
-![](output_images/20rand-Prefix-S.png?raw=true "20 random movies with prefix S as input")
+![image1](output_images/20rand-Prefix-S.png?raw=true "20 random movies with prefix S as input")
+
+![image2](output_images/20rand-Prefix-The.png?raw=true "20 random movies with prefix The as input")
+
+![image3](output_images/100rand-Prefix-A.png?raw=true "20 random movies with prefix The as input")
