@@ -20,4 +20,5 @@ Notes:
 
 Pictures: 
 
-![Alt text](output_images/20rand-Prefix-S.png?raw=true "20 random movies with prefix S as input")
+20 random movies with prefix S as input
+![](output_images/20rand-Prefix-S.png?raw=true "20 random movies with prefix S as input")
