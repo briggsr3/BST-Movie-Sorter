@@ -17,3 +17,7 @@ Notes:
 
 > Code is unit tested
 > Tests were also run to analyze the statistics of the average time to search in a BST and to see how does the number of nodes visited (proportional to the primitive operations) when inserting a new key in the BST vary with the number of nodes in the bst, run ./tests
+
+Pictures: 
+
+![Alt text](output_images/20rand-Prefix-S.png?raw=true "20 random movies with prefix S as input")

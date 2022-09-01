@@ -1,8 +1,8 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/bobbybriggs/Desktop/Software-Creations/BST-Movie-Sorter'
 g++ -c -Wall main.cpp
- 
 g++ -c -Wall movies.cpp
+ 
 g++ -c -Wall utility.cpp
 g++ main.o movies.o -o runMovies
 g++ -c -Wall tests.cpp
